@@ -1,4 +1,316 @@
-TypeScript 
+
+name 
+
+location 
+
+Graduation 
+
+awareness about html, css, javascript etc. / web designing /web developement / UI
+
+programming langauge ? 
+
+
+
+
+Web application / Web site / front end application/ UI 
+------------------------------------------------------
+
+HTML 
+    - "what" contents you want to place on your webpage 
+    - define the structure of your webpage 
+
+CSS  - cascading style sheet 
+    - "how" content should appear on the webpage 
+    - define "style rules" for webpages 
+
+JavaScript 
+-----------
+    - it is a client-side scripting language 
+    - it is used to provide programming functionalities on webpages 
+    - javascript is a interpreted language 
+    - every browser i.e chrome, mozilla, IE has a "javascript engine"
+        - JS engine is reponsible to execute javascript code inside the browser 
+
+            Google Chrome       === V8
+            mozilla firefox     === Spider monkey 
+            IE                  === Chakra 
+            Opera 
+            ...
+            ...
+
+    - 1997, javascript was introduced 
+    - 1997, it was submitted to ECMA for standardization 
+    - since then ECMA keeps publishing diff specifications / standards 
+            - all the browsers are supposed to implement these specifications 
+            - the implementation of these specifications is called 'ECMAScript'
+
+            - 1997  : ES1 
+            - 1998  : ES2 
+            - 1999  : ES3 
+            - 2009  : ES5
+
+            - 2015  : ES6 / ECMASCript 2015
+
+            - 2016
+            - 2017
+            - 2018
+            - 2019
+            - 2020  : ES11 
+
+
+    - using javascript....
+            - form validations 
+            - DOM manipulation 
+            - CSS manipulation 
+            - event handling 
+            - business logic 
+            - ajax calls / http calls
+
+
+
+ES6 / ECMAScript 2015
+-------------
+    - advanced javascript 
+    - this specification has introduced a lot of new features to javascript
+
+    - ES6 Features 
+        - let, const keywords 
+        - arrow functions 
+        - rest operators / spread operator 
+        - async ans await 
+        - generators 
+        - **classes and objects 
+        - **module system
+        - ....
+        - ...
+
+
+ES6 Tools 
+---------------
+    1. Transpiler 
+            - convert the advanced scripts into legacy scripts 
+                i.e. Es6 code into ES5 code 
+
+            - Babel 
+
+    2. Bundler 
+            - bundles several files together and creates a single 
+                    compressed file 
+            
+            - Webpack 
+
+JQuery 
+    - it is just a javascript library 
+    - it simplifies some javasript tasks 
+    - open source / light weight / cross-browser js library 
+
+Bootstrap / SemantiUI
+    - to create responsive webpages 
+    - it is library for css 
+    - it provides customizable components 
+         HTML5+CSS3+JQUERY 
+
+
+
+
+
+
+
+
+
+
+Language                        Library /api/ pacakge                Framework 
+
+javascript/typescript           jquery                              Angular / 
+                                bootstrap                           Ember /     
+                                react                               Vue 
+                                //..
+
+java                            collection, IO,                     Spring 
+                                util, jdbc, 
+                                gson, jackson, 
+                                ...
+
+python                          ....                            django 
+
+
+c#                              ...                             .net framework 
+     |                            |                                 |
+programming                 simplify tasks                  standardize the proecss 
+capabilities 
+
+
+
+
+
+
+
+
+    **JavaScript is not typesafe 
+
+    TypeScript Language 
+    ----------------------
+        - it is developed by Microsoft 
+        - it is superset of ES6 
+        - it has all the features of ES6 + some additional features 
+            - typescript is typesafe 
+                - it uses 'types'
+            - typescript has some more features 
+                    - supports generics i.e. you can create generic clsses, methods, etc.
+                    - supports 'Decorators'
+                    - ...
+
+        - typescript is a compiled language
+        - we cannot execute typescript inside the browser 
+        - we have to convert ts code into js code 
+
+                > tsc 
+
+
+    Environment Setup for typescript 
+    ---------------------------------------
+
+        1. install NodeJS 
+                - 'npm' will be installed automatically along with node 
+                - 'npm' is a dependency management tool 
+
+        2. Editor / IDE 
+            - Visual Studio Code 
+
+        3. npm install -g typescript 
+
+
+
+        Declare variables in typescript 
+        ---------------------------------
+
+            var keyword 
+                - global or function scoped variables
+
+            let keyword 
+                - block scoped or function scoped variables 
+
+            const keyword 
+                - block scoped or function scoped variables 
+                - const variables cannot be re-assigned 
+
+        Arrow functions
+        -----------------
+                - new / more abbreviated way of writing functions in javascript / ES6 
+
+        types 
+        ----------
+
+                number 
+                string 
+                booelan 
+                null 
+                void 
+                any 
+
+        custom types in typescript 
+        ------------------------------
+
+            a. create custom object type  
+                - using 'type' keyword
+                - using class 
+                - using interface
+
+            b. create custom function type 
+
+
+
+
+    Angular Framework 
+    ----------------------------  
+        - it was introduced in 2010 
+        - it was called as angularjs --- it was just a library in the beginning 
+
+         angularjs                           Angular 
+        - Angular 1.x                       - angular 2, 4, 5, 6, 7, 8, 9, 10
+        - javascript based                  - typescript based 
+
+        - 2016 : Angular 2
+        - 2017 ....
+        .....
+        ...     : Angular 10
+
+
+   Other frameworks / libraries 
+   ----------------------------
+        - EmberJS
+        - ReactJS
+        - VueJS 
+
 
 
 Angular 
+----------
+    - it is a framework for creating client side web applications 
+    - the angular framework is distrubuted in the form of diff modules/libraries 
+
+        @angular/core                     
+        @angular/compiler             
+        @angular/compiler-cli         
+        @angular/common                      
+        @angular/router  
+        @angular/forms                        
+
+
+
+    angularjs/
+    angular1.x          Angular 2       Angular 4           Angular 5       Angular 6       Angular 7       Angular 8              Angular 9           Angular 10
+    2010                2016            March 2017          Nov 2017        May 2018        Oct 2018        May 2019               Feb 2020             June 2020
+
+
+    Environment setup  for Angular 
+    ----------------------
+        1. Install NodeJS 
+
+        2. Editor / IDE 
+                - VS Code 
+                - Atom, Brackets, Sublime, etc any text editor 
+                - Webstorm / IntellIj Idea (commercial)
+
+        3. install angular-cli 
+                - angular cli is a command line tool to manage angular projects 
+                - i.e. create/manage/build/deploy angular projects 
+
+                > npm install -g @angular/cli 
+
+                > ng --version
+
+
+    NPM 
+    -------
+        - it is a dependency management Tool
+        - it comes with nodejs automatically 
+        - you can download / install the dependencies locally / globally 
+
+
+    Angular Building Blocks 
+    ----------------------------
+
+        1. Component 
+                - component is used to render a particular patch/part  on the screen 
+                - component is a class encapsulates data, view and logic together 
+                - component controls a template 
+                - every angular app has at-least one component, usually called AppComponent 
+
+                    AppComponent 
+                         |
+        ---------------------------------------
+        Header          Navbar              Courses
+                                                |
+                                        --------------------
+
+
+        2. Template 
+                - template is a 'view' created using html 
+
+
+
+        Create a new angular project 
+        -------------------------------
+
+            > ng new helloworld-app 
