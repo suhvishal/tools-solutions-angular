@@ -295,7 +295,31 @@ Angular
                 - component is used to render a particular patch/part  on the screen 
                 - component is a class encapsulates data, view and logic together 
                 - component controls a template 
-                - every angular app has at-least one component, usually called AppComponent 
+                -** every angular app has at-least one component, usually called AppComponent
+
+
+                    app.component.ts
+                    ---------------------
+
+                    import {Component} from '@angualr/core'
+
+                    @Component({
+                        selector : 'app-root',
+                        templateUrl : 'app.component.html'
+                    })
+                    class AppComponent {
+
+                    }
+
+
+                    app.component.html
+                    ---------------------
+                            - html code to represent the 'view'
+
+
+                    <app-root></app-root>
+
+
 
                     AppComponent 
                          |
@@ -314,3 +338,49 @@ Angular
         -------------------------------
 
             > ng new helloworld-app 
+
+
+
+            header.component.ts 
+            ----------------------
+
+            @Component({
+                selector: 'app-header',
+                templateUrl : 'header.component.html'
+            })
+            class HeaderComponent{
+
+            }
+
+            header.component.html
+            ----------------------
+                <div> this is header </div>
+
+
+            Create a new Component in angular 
+            ----------------------------------
+
+                    > ng generate component Header 
+                            or 
+                    > ng g c Header 
+
+            Data Binding 
+            -----------------
+                - communication between component and template 
+
+                1. string interpolation 
+                        - {{ fieldname }}
+                        - used to output dynamic text into div, headings, paragraphs etc. 
+
+                2. property binding 
+                        - used to bind a value of a 'field' (data member declared in component ) to dom property of an element 
+
+                            <element [domProperty]="fieldname" />
+
+                            <img [src] = "imageUrl" />
+
+                3. Event Binding 
+                        - used to bind a handler method to listen to dom event 
+                        - i.e. mouse events, key events, form events etc. 
+
+                        
