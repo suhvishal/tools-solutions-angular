@@ -6,6 +6,7 @@ import { HeaderComponent } from './header/header.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CoursesComponent } from './courses/courses.component';
 import { SingleCourseComponent } from './courses/single-course/single-course.component';
+import { HighlightDirective } from './mydirectives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { SingleCourseComponent } from './courses/single-course/single-course.com
     NavbarComponent,
     CoursesComponent,
     SingleCourseComponent,
+    HighlightDirective,
   ],
   imports: [
     BrowserModule
