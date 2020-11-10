@@ -290,6 +290,15 @@ Angular
 
     Angular Building Blocks 
     ----------------------------
+        1. Component 
+        2. template 
+        3. Module 
+        4. Directive
+        5. pipes
+        6. Services 
+
+
+
 
         1. Component 
                 - component is used to render a particular patch/part  on the screen 
@@ -326,12 +335,42 @@ Angular
         ---------------------------------------
         Header          Navbar              Courses
                                                 |
-                                        --------------------
+                                        ----------------------------------
+                                        singlecourse            singlecourse
 
 
         2. Template 
                 - template is a 'view' created using html 
 
+
+        3. Module 
+                - every angular app has atleast one module called 'AppModule'
+                - module is a container which describes/registers metadata & entities in our application  
+                - all the components, directives, pipes, services, other modules are described into a module 
+
+                app.module.ts   (defines the Root Module)
+                -------------------
+
+                @NgModule({
+                    declarations: [
+                        //describes all the components / directives / pipes etc
+                        AppComponent,
+                        HeaderComponent,
+                        NavbarComponent,
+                        CoursesComponent
+                    ],
+                    imports: [
+                        BrowserModule,
+                        FormsModule,
+                        HttpClientModule, 
+                        //import other modules that we can use in our app
+                    ],
+                    providers: [
+                        //describe the 'services'
+                    ],
+                    bootstrap: [AppComponent]
+                    })
+                    export class AppModule { }
 
 
         Create a new angular project 
@@ -383,4 +422,54 @@ Angular
                         - used to bind a handler method to listen to dom event 
                         - i.e. mouse events, key events, form events etc. 
 
+                4. Custom data binding 
+                        - passing data from parent compoent to child component 
+
+                5. custom event binding 
+                        - raise an event from child component to parent component 
                         
+
+    Directives
+    -----------------
+            - directives in angular are used to enhance the view 
+
+            1. attribute directive 
+                    - used as attributes to html elements 
+                    - used to enhance the elements 
+
+            2. structural directives 
+                    - used to manipulate DOM 
+                    - used to show/hide/repeat html elements 
+
+                    => *ngIf directive
+                    ---------  ---
+                            - show/hide elements based on conditions 
+
+                        <div *ngIf="some_boolean_expression">
+                            this is some content... 
+                        </div>
+
+
+                    => *ngFor directive
+                    ----------------------
+                        - used to repeat html elements on each iteration of an array 
+
+                        namesArray: string[] = ['Nada','Abdul','Rahaf','Salwa','Shouq','reham']
+
+                        <p> {{ namesArray[0] }} </p>
+                        <p> {{ namesArray[1] }} </p>
+                        <p> {{ namesArray[2] }} </p>
+                        <p> {{ namesArray[3] }} </p>
+                        <p> {{ namesArray[4] }} </p>
+
+                                or 
+
+                        <p *ngFor="let name of namesArray"> 
+                                {{ name }}
+                        </p>
+
+
+
+            3. component directive 
+                    - component is a most common directive 
+                    - component directive is used to render a 'view'

@@ -1,4 +1,30 @@
 
 <div class="courses">
     <h1>This is Courses Component</h1>
+
+    <div *ngIf="isActive">
+        Showing the div tag only when the condition is true...
+    </div>
+
+
+    <div>
+
+        <!-- <div class="mystyle" *ngFor="let course of ourCourses">
+            <p> Course Name :  {{ course.cName }} </p>
+            <p> Trainer : {{ course.trainer }} </p>
+            <p> Duration: {{ course.duration }}</p>
+        </div> -->
+
+        <app-single-course  *ngFor="let course of ourCourses"  
+                            [course]="course">
+        </app-single-course>
+
+        <!-- <app-single-course [course]="ourCourses[1]">
+        </app-single-course>
+
+        <app-single-course [course]="ourCourses[2]">
+        </app-single-course> -->
+
+    </div>
+
 </div>

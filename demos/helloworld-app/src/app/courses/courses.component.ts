@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Course } from '../model/course.model';
 
 @Component({
   selector: 'app-courses',
@@ -7,7 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CoursesComponent implements OnInit {
 
-  constructor() { }
+  public isActive: boolean = false;
+  public ourCourses: Course[];
+
+  constructor() { 
+
+    this.ourCourses = [
+        new Course(1, 'Angular', 'Vishal', '5 Days'),
+        new Course(2, 'React', 'Faris', '8 Days'),
+        new Course(3, 'Java', 'Lamya', '2 Days'),
+        new Course(4, 'Spring', 'Maram', '10 Days')
+      ]
+  }
 
   ngOnInit(): void {
   }
