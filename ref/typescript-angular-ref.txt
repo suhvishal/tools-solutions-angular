@@ -437,6 +437,13 @@ Angular
                     - used as attributes to html elements 
                     - used to enhance the elements 
 
+                    => [ngClass]
+                            - add / remove CSS classes from the element based on some condition 
+
+                    => [ngStyle]
+
+
+
             2. structural directives 
                     - used to manipulate DOM 
                     - used to show/hide/repeat html elements 
@@ -469,7 +476,27 @@ Angular
                         </p>
 
 
+                     => [ngSwitch]
+                     ----------------
+                            - show/hide elements based on switch case 
+
+                        <div [ngSwitch]="someFieldName">
+
+                            <div *ngSwitchCase="case1"> This is div 1 </div>
+                            <div *ngSwitchCase="case2"> This is div 2 </div>
+                            <div *ngSwitchCase="3"> This is div 3 </div>
+                            <div *ngSwitchCase="4"> This is div 4 </div>
+                            <div *ngSwitchDetaulf> This is div 5 </div>
+                        </div>
+
+
 
             3. component directive 
                     - component is a most common directive 
                     - component directive is used to render a 'view'
+
+
+            Custom Directives
+            ---------------------------
+
+                <h1> This is heading </h1>
