@@ -1,4 +1,3 @@
-
 <h1>Login</h1>
 
 <form #loginForm="ngForm" (ngSubmit)="handleLogin(loginForm)">
@@ -6,17 +5,36 @@
     <div class="form-group">
         <label for="email">Email address</label>
         <input type="email" class="form-control" 
-            id="email"
-            ngModel
-            name="email">
+                id="email" 
+                ngModel 
+                #uname="ngModel"
+                name="email" 
+                required>
+        <div *ngIf="!uname.valid && uname.touched" class="alert alert-danger">
+            Email is required
+        </div>
     </div>
 
     <div class="form-group">
         <label for="pwd">Password</label>
         <input type="password" class="form-control" 
                 id="pwd" 
-                ngModel
-                name="password">
+                ngModel 
+                name="password"
+                #pwd="ngModel" 
+                required
+                minlength="6"
+                >
+
+        <div *ngIf="!pwd.valid && pwd.touched" >
+                <div *ngIf="pwd.errors.required" class="alert alert-danger">
+                    Password is required
+                </div>
+                <div *ngIf="pwd.errors.minlength" class="alert alert-danger">
+                    Min length should be 6 characters 
+                </div>
+
+        </div>
     </div>
 
     <button type="submit" class="btn btn-primary">Login</button>

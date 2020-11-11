@@ -526,3 +526,10 @@ Angular
                     2. FormControl object 
                             - to track the value and validity status of an individual form element 
                                     i.e. textfield, checkbox, radio, etc. 
+
+            1. template driven forms 
+                    - FormGroup, FormControl objects are created automatically / implicitely 
+                            just by adding some directives in the template 
+
+            2. Reactive forms 
+                    - FormGroup, FormControl objects are created explictely in the component 
