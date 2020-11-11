@@ -530,6 +530,9 @@ Angular
             1. template driven forms 
                     - FormGroup, FormControl objects are created automatically / implicitely 
                             just by adding some directives in the template 
+                    - good for simple forms with basic validation 
 
             2. Reactive forms 
                     - FormGroup, FormControl objects are created explictely in the component 
+                    - complex forms with custom validation 
+                    - well testable 
