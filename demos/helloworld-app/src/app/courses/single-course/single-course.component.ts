@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Course } from '../../model/course.model';
 
 @Component({
@@ -11,9 +11,18 @@ export class SingleCourseComponent implements OnInit {
   @Input()
   public course: Course;
 
-  constructor() { }
+  @Output()
+  public onSelectCourse: EventEmitter<Course>;
+
+  constructor() { 
+    this.onSelectCourse = new EventEmitter();
+  }
 
   ngOnInit(): void {
+  }
+
+  handleEnrollClick(){
+    this.onSelectCourse.emit(this.course);
   }
 
 }

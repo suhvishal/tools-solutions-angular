@@ -24,4 +24,9 @@ export class CoursesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  handleOnSelectCourse($event){
+    console.log('Course Selected....', $event)
+    //
+  }
+
 }

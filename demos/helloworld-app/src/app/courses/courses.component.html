@@ -16,7 +16,9 @@
             <p> Duration: {{ course.duration }}</p>
         </div> -->
 
-        <app-single-course  *ngFor="let course of ourCourses"  
+        <app-single-course
+                        (onSelectCourse)="handleOnSelectCourse($event)" 
+                          *ngFor="let course of ourCourses"  
                             [course]="course">
         </app-single-course>
 

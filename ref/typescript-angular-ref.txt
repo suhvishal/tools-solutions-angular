@@ -496,7 +496,33 @@ Angular
                     - component directive is used to render a 'view'
 
 
-            Custom Directives
+            Custom attribute Directives
             ---------------------------
+                - Directive in angular is also a typescript class 
 
-                <h1> This is heading </h1>
+                <h1 appHightLight> This is heading </h1>
+
+
+                @directive({
+                    selector: '[appHightLight]'
+                })
+                class HightLightDirective {
+
+                }
+
+
+        Form handling in angular 
+        ----------------------------
+
+                - @angular/forms library provides FormsModule & ReactiveFormsModule
+                - FormsModule & ReactiveFormsModule contains some directives/classes/types that 
+                        we can use to perform form handling  
+                
+                - @angular/forms library provides some useful objects to headle form data 
+
+                    1. FormGroup object 
+                            - to track value and validity of a group of formcontrol objects 
+
+                    2. FormControl object 
+                            - to track the value and validity status of an individual form element 
+                                    i.e. textfield, checkbox, radio, etc. 
