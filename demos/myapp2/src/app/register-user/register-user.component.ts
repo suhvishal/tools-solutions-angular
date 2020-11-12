@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-register-user',
@@ -14,9 +14,9 @@ export class RegisterUserComponent implements OnInit {
   constructor() { 
 
     this.userForm = new FormGroup({
-      fullName : new FormControl(),
-      email: new FormControl(),
-      password: new FormControl()
+      fullName : new FormControl('', [Validators.required, Validators.minLength(6)]),
+      email: new FormControl('', Validators.required),
+      password: new FormControl('', Validators.required)
     })
 
   }
@@ -26,7 +26,7 @@ export class RegisterUserComponent implements OnInit {
 
   handleRegisterUser(){
     console.log('REgister button clicked')
-    console.log(this.userForm.value)
+    console.log(this.userForm)
   }
 
 }

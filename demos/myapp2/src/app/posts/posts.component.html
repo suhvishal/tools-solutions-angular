@@ -1,0 +1,38 @@
+
+<h1>This is Posts Component</h1>
+
+<br />
+
+    <button (click)="handleAddPost()" class="btn btn-primary">
+        Add New Post 
+    </button>
+
+    <br />
+    <br />
+
+<table class="table">
+    <thead>
+        <th>PostId</th>
+        <th>Title</th>
+        <th>Body</th>
+        <th>&nbsp;</th>
+        <th>&nbsp;</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of posts">
+            <td>{{ p.id }} </td>
+            <td>{{ p.title }}</td>
+            <td>{{ p.body }}</td>
+            <td>
+                <button (click)="handleUpdatePost(p)" class="btn btn-info">
+                    Update
+                </button>
+            </td>
+            <td>
+                <button (click)="handleDeletePost(p)" class="btn btn-danger">
+                    Remove
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>

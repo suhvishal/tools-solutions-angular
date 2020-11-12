@@ -536,3 +536,56 @@ Angular
                     - FormGroup, FormControl objects are created explictely in the component 
                     - complex forms with custom validation 
                     - well testable 
+
+
+                        new FormControl(initialvalue=null, [validator, validator], asyncvalidators?)
+
+                        new FormControl('', [Validators.required, Validators.minLength(6)])
+
+
+            pipe
+            ---------
+                - pipes are used to format the output 
+
+                - uppercase
+                - lowercase
+                - currency 
+                - number 
+                - date 
+
+
+
+        Service 
+        ---------
+            - a service in angular is a typescript class 
+            - usually service class is used to write some business logic 
+
+
+          how to make  HTTP REQUSTS to the backend / server / REST API 
+          ---------------------------------------------------------------
+
+            - HttpClientModule is provided through the library @angular/common/http 
+            - HttpClientModule provides a service called 'HttpClient' 
+
+            - HttpClient service we can make http calls / http requests 
+
+
+                GET         https://jsonplaceholder.typicode.com/posts
+                                - get all the posts from the db 
+                                i.e. [
+                                        {
+                                            "userId": 10,
+                                            "id": 100,
+                                            "title": "at nam consequatur ea labore ea harum",
+                                            "body": "cupiditate quo est a modi nesciunt soluta\nipsa voluptas error itaque dicta in\nautem qui minus magnam et distinctio eum\naccusamus ratione error aut"
+                                        },
+                                        .....
+                                    ]
+
+                GET         https://jsonplaceholder.typicode.com/posts/10
+                                - returns a single post based on given id 
+                                - if id is wrong, return 404 not found error 
+
+                POST        https://jsonplaceholder.typicode.com/posts
+
+                PUT         https://jsonplaceholder.typicode.com/posts/1
