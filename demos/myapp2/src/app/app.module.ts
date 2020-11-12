@@ -9,16 +9,11 @@ import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
 import { PostsComponent } from './posts/posts.component';
 import {HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
-import { RouterModule, Routes } from '@angular/router';
-import { NavbarComponent } from './navbar/navbar.component';
+ import { NavbarComponent } from './navbar/navbar.component';
+import { RoutingModule } from './routing/routing.module';
 
 
-const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterUserComponent },
-  { path: 'posts', component: PostsComponent },
-]
+
 
 @NgModule({
   declarations: [
@@ -35,7 +30,7 @@ const appRoutes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    RoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

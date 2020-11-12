@@ -475,6 +475,14 @@ Angular
                                 {{ name }}
                         </p>
 
+                        <p *ngFor="let item of items; let i = index">
+                               {{ i }} - {{ item }}
+                        <p>
+
+                        <p *ngFor="let item of items; let index as i">
+                                {{ item }}
+                        <p>
+
 
                      => [ngSwitch]
                      ----------------
@@ -621,3 +629,15 @@ Angular
             2. define a place where to render the compoents 
 
                         <router-outlet></router-outlet>
+
+
+
+        ng g c <<componentname>>
+        ng generate component <<componentname>>
+
+        
+        ng g d <<directivename>> 
+
+        ng g m <<modulename>> 
+
+        ng g s <<servicename>> 
