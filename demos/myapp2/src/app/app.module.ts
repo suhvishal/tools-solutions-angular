@@ -8,6 +8,17 @@ import { RegisterUserComponent } from './register-user/register-user.component';
 import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
 import { PostsComponent } from './posts/posts.component';
 import {HttpClientModule} from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
+import { RouterModule, Routes } from '@angular/router';
+import { NavbarComponent } from './navbar/navbar.component';
+
+
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterUserComponent },
+  { path: 'posts', component: PostsComponent },
+]
 
 @NgModule({
   declarations: [
@@ -15,13 +26,16 @@ import {HttpClientModule} from '@angular/common/http';
     LoginComponent,
     RegisterUserComponent,
     PipeDemoComponent,
-    PostsComponent
+    PostsComponent,
+    HomeComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

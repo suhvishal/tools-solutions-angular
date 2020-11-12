@@ -589,3 +589,35 @@ Angular
                 POST        https://jsonplaceholder.typicode.com/posts
 
                 PUT         https://jsonplaceholder.typicode.com/posts/1
+
+
+
+            Routing / Navigation in angular 
+            ---------------------------------
+
+                1. define routes 
+
+                        const appRoutes:Routes = [
+
+                                { path: '', component: HomeComponent },
+
+                                { path: '/login', component: LoginComponent },
+
+                                ....
+                                ....
+
+                        ]
+
+                        @NgModule({
+                            declarations: [...],
+                            imports : [
+                                ...
+                                ...
+                                RouterModule.forRoot(appRoutes)
+                            ]
+
+                        })
+
+            2. define a place where to render the compoents 
+
+                        <router-outlet></router-outlet>
